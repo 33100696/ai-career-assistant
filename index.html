@@ -1,1 +1,41 @@
-<div id="root"></div><script type="module" src="/src/main.jsx"></script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A candidate-controlled career assistant for graduates." />
+  <title>Career Evidence | AI Career Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">✦ Career Evidence</a>
+    <nav aria-label="Main navigation">
+      <a href="#upload">CV upload</a><a href="#evidence">Evidence review</a><a href="#roles">Explore roles</a><a href="#letter">Cover letter</a><a href="#interview">Interview practice</a>
+    </nav>
+    <button class="text-button" id="reset">Reset demo</button>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">AI Career Assistant for Graduates</p>
+      <h1>Turn what you've done into evidence you can use.</h1>
+      <p class="lead">A calm, candidate-controlled space to review your CV, explore suitable roles and prepare grounded applications.</p>
+      <div class="actions"><a class="button primary" href="#upload">Start with your CV →</a><a class="button secondary" href="#roles">Explore the demo</a></div>
+      <div class="principles"><article><i>◌</i><h2>Inspectable evidence</h2><p>See the source behind every suggestion.</p></article><article><i>⌕</i><h2>Edit or delete anything</h2><p>You stay in control of your information.</p></article><article><i>◇</i><h2>Advice, not a decision</h2><p>Role relevance is not a hiring outcome.</p></article></div>
+      <p class="disclaimer">Not found in a CV does not mean a skill is absent. This demonstration uses mock data and makes no employability or hiring decisions.</p>
+    </section>
+
+    <section class="page narrow" id="upload"><div class="step"><b>01</b><div><h1>Start with your CV</h1><p>Upload a CV to identify evidence you can inspect before you receive any advice.</p></div></div><div class="upload-box"><span>↑</span><h2 id="file-name">Drop your CV here</h2><p id="file-help">PDF, DOC or DOCX - your file stays in this browser for this demo.</p><label class="button primary">Choose a file<input id="cv-file" type="file" accept=".pdf,.doc,.docx" hidden></label><a id="review-link" class="button secondary hidden" href="#evidence">Review extracted evidence →</a></div><aside class="note"><b>Privacy first</b><span>Names and contact details are not used for role exploration. No file is uploaded anywhere.</span></aside></section>
+
+    <section class="page" id="evidence"><div class="step"><b>02</b><div><h1>Review your evidence</h1><p>Confirm, correct or remove information. Only confirmed evidence appears in your planning tools.</p></div></div><div class="two-col"><div><div class="section-title"><h2>Extracted from your CV</h2><span id="confirmed-count">2 confirmed</span></div><div id="evidence-list" class="evidence-list"></div><button class="add-button" id="add-evidence">+ Add evidence</button></div><aside class="panel"><h2>Why review first?</h2><p>This keeps the next steps grounded in things you recognise and can stand behind.</p><a class="button primary" href="#roles">Explore roles →</a></aside></div></section>
+
+    <section class="page" id="roles"><div class="step"><b>03</b><div><h1>Explore roles</h1><p>Compare roles through visible evidence, not an opaque employability score.</p></div></div><div class="role-layout"><div><label class="search">⌕ <input id="role-search" type="search" placeholder="Search roles" aria-label="Search roles"></label><div id="role-list" class="role-list"></div></div><aside id="role-detail" class="role-detail"></aside></div></section>
+
+    <section class="page" id="letter"><div class="step"><b>04</b><div><h1>Plan your cover letter</h1><p>Use confirmed evidence to create a clear outline - not claims you cannot support.</p></div></div><div class="two-col"><div class="letter"><div class="letter-heading"><div><small>Planning for</small><h2 id="letter-role">Junior Software Developer</h2></div><span>Outline · 4 sections</span></div><label>Opening <small>Your motivation</small><textarea>I am writing to apply for this role because I am keen to build on my project-based experience.</textarea></label><label>Evidence point 1 <small id="source-one">Source: Final-year web application project</small><textarea id="letter-one">Show how React & JavaScript helped you achieve something tangible.</textarea></label><label>Evidence point 2 <small id="source-two">Source: Data visualisation coursework</small><textarea id="letter-two">Connect Data analysis to a need in the role description.</textarea></label><label>Closing <small>Your next step</small><textarea>Invite a conversation and thank the reader for their time.</textarea></label></div><aside class="panel"><h2>Keep it truthful</h2><p>This plan uses confirmed CV evidence. Edit it to reflect your voice and research the organisation before writing.</p><a class="button primary" href="#interview">Practise an interview →</a></aside></div></section>
+
+    <section class="page" id="interview"><div class="step"><b>05</b><div><h1>Interview practice</h1><p>Practise structuring a real example with STAR. This is reflection support, not a judgement of personality or ability.</p></div></div><div class="practice-top"><label>Competency<select id="topic"><option>Teamwork</option><option>Problem solving</option><option>Communication</option><option>Adaptability</option></select></label><div><small>Practice progress</small><b id="progress">0/4 parts completed</b></div></div><article class="question"><small>Question</small><h2 id="question-text">Tell me about a time you demonstrated teamwork in a project.</h2><p>Use an example you can explain comfortably. You can change or leave any field blank.</p></article><div class="star-grid"><label>Situation<textarea data-star="situation" placeholder="Set the context: where and when?"></textarea></label><label>Task<textarea data-star="task" placeholder="What were you responsible for?"></textarea></label><label>Action<textarea data-star="action" placeholder="What did you specifically do?"></textarea></label><label>Result<textarea data-star="result" placeholder="What changed or what did you learn?"></textarea></label></div><div class="feedback"><div><b id="word-count">0 words</b><span id="feedback-text">Add detail to make your example easier to follow.</span></div><button class="button secondary" id="clear-star">Clear answer</button></div></section>
+  </main>
+  <footer>Demonstration only · Uses mock data · Candidate-controlled advice</footer>
+  <script src="script.js"></script>
+</body>
+</html>
