@@ -1,26 +1,17 @@
 # AI Career Assistant
 
-A responsive React demonstration of an evidence-first career support tool for graduates.
+A responsive, static HTML/CSS/JavaScript demonstration of an evidence-first career support tool for graduates. No backend, database, sign-in, package installation or hosting service is required.
 
-## What it includes
+## Use it
 
-- CV upload simulation and privacy messaging
-- Editable/confirmable CV evidence review
+Open `index.html` in any modern browser, or visit the GitHub Pages link once deployment completes.
+
+## Features
+
+- CV filename selection (the file never leaves the browser)
+- Editable and confirmable mock CV evidence
 - Explainable role exploration without employability scoring
 - Evidence-grounded cover-letter planning
-- STAR interview practice workspace
+- STAR interview-practice workspace
 
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-The demo uses mock data only and stores interaction state in the browser.
+All demo state is held in the current browser session only.
